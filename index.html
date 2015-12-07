@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>My Reddit</title>
+  <script type="text/javascript" src="https://code.jquery.com/jquery-1.11.3.js"></script>
+  <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/handlebars.js/4.0.5/handlebars.js"></script>
+  <script type="text/javascript" src="app.js"></script>
+</head>
+<body>
+<button id="load-button">Load</button>
+
+<script type="text/x-handlebars-template" id="reddit-item">
+  {{#each items}}
+  <div class="item">
+    <h2>{{data.title}}</h2>
+    By {{data.author}}
+    <img src="{{data.thumbnail}}"> <a href="http://www.reddit.com{{data.permalink}}">{{data.title}}</a>
+  </div>
+  {{/each}}
+</script>
+
+<div id="reddit-content"></div>
+
+</body>
+</html>
